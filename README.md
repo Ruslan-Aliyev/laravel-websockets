@@ -6,7 +6,8 @@ php artisan vendor:publish --provider="BeyondCode\LaravelWebSockets\WebSocketsSe
 php artisan migrate
 php artisan vendor:publish --provider="BeyondCode\LaravelWebSockets\WebSocketsServiceProvider" --tag="config"
 
-composer require pusher/pusher-php-server:7.0 -W
+composer require pusher/pusher-php-server:7.0 -W # Can't have latest versions here
+composer require react/promise:^2.3 -W
 ```
 
 config/websockets.php
@@ -77,3 +78,6 @@ Visit http://localhost:8000/laravel-websockets
 - https://github.com/beyondcode/laravel-websockets
 - https://startutorial.com/view/laravel-websockets-tutorial
 - https://www.honeybadger.io/blog/a-guide-to-using-websockets-in-laravel/
+- https://www.youtube.com/playlist?list=PLfdtiltiRHWGoBloQG32kmesr0EUGoYpn
+- https://www.youtube.com/playlist?list=PLwAKR305CRO9rlj-U9oOi4m2sQaWN6XA8
+- https://www.youtube.com/playlist?list=PLQDioScEMUhl_vDV7BcYTUdTU4Jz8g58X
