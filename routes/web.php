@@ -22,3 +22,5 @@ Route::get('/test-websockets', function () {
 
     return 'event fired';
 });
+
+Route::view('/check', 'listen');

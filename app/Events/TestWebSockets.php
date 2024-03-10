@@ -31,16 +31,16 @@ class TestWebSockets implements ShouldBroadcast
      */
     public function broadcastOn()
     {
-        return new Channel('testchannel');
+        return new Channel('public.test-channel.1');
     }
 
-    // public function broadcastAs()
-    // {
-    //     return 'CustomEventName';
-    // }
+    public function broadcastAs()
+    {
+        return 'CustomEventName';
+    }
 
-    // public function broadcastWith()
-    // {
-    //     return ['dummy' => 'data'];
-    // }
+    public function broadcastWith()
+    {
+        return ['dummy' => 'data'];
+    }
 }
