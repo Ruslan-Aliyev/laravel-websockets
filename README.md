@@ -81,3 +81,7 @@ Visit http://localhost:8000/laravel-websockets
 - https://www.youtube.com/playlist?list=PLfdtiltiRHWGoBloQG32kmesr0EUGoYpn
 - https://www.youtube.com/playlist?list=PLwAKR305CRO9rlj-U9oOi4m2sQaWN6XA8
 - https://www.youtube.com/playlist?list=PLQDioScEMUhl_vDV7BcYTUdTU4Jz8g58X
+- https://www.youtube.com/watch?v=pIGy7-7gGXI
+- https://www.youtube.com/watch?v=qdhnC_FUBbs
+- https://www.youtube.com/watch?v=LU3fkcUyCVA
+- https://www.youtube.com/watch?v=YCK8JwDJI5s
