@@ -77,3 +77,19 @@ Visit http://localhost:8000/laravel-websockets
 ![](/Illustrations/local_ws_server.png)
 
 If you are really using the Pusher server, the dashboard is here https://dashboard.pusher.com/apps/{app_id}/console
+
+## Channel types
+
+- Public: Anyone without signing in can write into.
+- Private: Only logged-in users can write into. The writer's identity will remain anonymous.
+	- Presence: Only logged-in users can write into. The writer's identity is visible.
+
+## Fire a public channel event
+
+Make a new event `php artisan make:event PublicChannelEvent`, make it implement `ShouldBroadcast`. Complete this file.
+
+Note: in `route.channels.php`'s `Broadcast::channel('App.Models.User.{id}'` must return a truthy value, for the ws-handshake to be successful.
+
+Fire the event in an easy way: in `route.web.php`, make a route `Route::get('/test-public-channel', function () { event(new \App\Events\PublicChannelEvent()) ...`, then visit http://localhost:8000/test-public-channel
+
+![](/Illustrations/public_event_shown_on_dashboard.png)

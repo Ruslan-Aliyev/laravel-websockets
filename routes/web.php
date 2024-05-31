@@ -16,3 +16,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/test-public-channel', function () {
+    $res = event(new \App\Events\PublicChannelEvent());
+
+    return 'event fired';
+});
