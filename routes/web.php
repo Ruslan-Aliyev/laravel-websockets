@@ -19,6 +19,9 @@ Route::get('/', function () {
 
 Route::get('/test-public-channel', function () {
     $res = event(new \App\Events\PublicChannelEvent());
-
     return 'event fired';
+});
+
+Route::get('/check-public-channel', function () {
+    return view('public');
 });

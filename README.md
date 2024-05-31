@@ -93,3 +93,31 @@ Note: in `route.channels.php`'s `Broadcast::channel('App.Models.User.{id}'` must
 Fire the event in an easy way: in `route.web.php`, make a route `Route::get('/test-public-channel', function () { event(new \App\Events\PublicChannelEvent()) ...`, then visit http://localhost:8000/test-public-channel
 
 ![](/Illustrations/public_event_shown_on_dashboard.png)
+
+## Receiving a public channel event
+
+`npm install laravel-echo pusher-js`
+
+`pusher-js`: Implements the Pusher API
+
+`laravel-echo`: A wrapper around the `pusher-js`, tailored to receive broadcasts from Laravel. It's a single-style wrapper that supports multiple drivers (eg: whether it's `pusher-js` or `socket.io`). The nice thing about using `Echo` is the ability to easily swap drivers, ie: if you start with `Pusher` free, then later decide to use `Reverb` or `Soketi`, you only need to update a bit of config.
+
+Configure `Echo` in `resources/js/bootstrap.js`
+
+Make a blade file: `public.blade.php`
+
+Create a route to serve this view in `route/web.php`: 
+```php
+Route::get('/check-public-channel', function () {
+    return view('public');
+});
+```
+
+Run:
+```
+php artisan serve
+php artisan websockets:serve # In another terminal
+npm run dev # In another terminal
+```
+
+![](/Illustrations/public_event_received_on_frontend.png)
