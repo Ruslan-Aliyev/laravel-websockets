@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PublicChannelController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,11 +18,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/test-public-channel', function () {
-    $res = event(new \App\Events\PublicChannelEvent());
-    return 'event fired';
-});
-
-Route::get('/check-public-channel', function () {
-    return view('public');
-});
+Route::get('/test-public-channel', [PublicChannelController::class, 'show']);
+Route::post('/test-public-channel', [PublicChannelController::class, 'test'])->name('test-public-channel');
+Route::get('/check-public-channel', [PublicChannelController::class, 'check']);

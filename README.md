@@ -104,12 +104,12 @@ Fire the event in an easy way: in `route.web.php`, make a route `Route::get('/te
 
 Configure `Echo` in `resources/js/bootstrap.js`
 
-Make a blade file: `public.blade.php`
+Make a blade file: `check-public.blade.php`
 
 Create a route to serve this view in `route/web.php`: 
 ```php
 Route::get('/check-public-channel', function () {
-    return view('public');
+    return view('check-public');
 });
 ```
 

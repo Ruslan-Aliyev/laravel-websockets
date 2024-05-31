@@ -14,14 +14,16 @@ class PublicChannelEvent implements ShouldBroadcast
 {
     use Dispatchable, InteractsWithSockets, SerializesModels;
 
+    var $updateInfo;
+
     /**
      * Create a new event instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($updateInfo)
     {
-        //
+        $this->updateInfo = $updateInfo;
     }
 
     /**
@@ -36,11 +38,11 @@ class PublicChannelEvent implements ShouldBroadcast
 
     public function broadcastAs()
     {
-        return 'CustomEventName';
+        return 'PublicUpdateEvent';
     }
 
     public function broadcastWith()
     {
-        return ['dummy' => 'data'];
+        return ['update' => $this->updateInfo];
     }
 }
