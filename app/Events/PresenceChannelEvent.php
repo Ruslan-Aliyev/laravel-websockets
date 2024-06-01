@@ -35,7 +35,7 @@ class PresenceChannelEvent implements ShouldBroadcast
      */
     public function broadcastOn()
     {
-        return new PresenceChannel('presence.test-channel.1');
+        return new PresenceChannel('presence.test-channel');
     }
 
     public function broadcastAs()

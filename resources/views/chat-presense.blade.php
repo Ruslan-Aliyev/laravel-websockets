@@ -33,7 +33,7 @@
             const chat = document.getElementById("chat");
 
             setTimeout(() => {
-                const channel = Echo.join('presence.test-channel.1');
+                const channel = Echo.join('presence.test-channel');
                 
                 channel
                     .subscribed(() => {

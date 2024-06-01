@@ -158,6 +158,7 @@ See the routes, controller, event, channel and blade files for sending and recei
 
 - https://www.youtube.com/watch?v=AUlbN_xsdXg (Very Good)
 - https://www.youtube.com/watch?v=8RL584c7EsI&list=PLWiQT7FWaG1igDILyxwi-h5gFhkXAVeWZ&index=23
+- https://www.youtube.com/watch?v=CkRGJC0ytdU
 
 ## Other Tutorials
 

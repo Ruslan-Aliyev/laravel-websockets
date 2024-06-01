@@ -33,7 +33,7 @@ class PublicChannelEvent implements ShouldBroadcast
      */
     public function broadcastOn()
     {
-        return new Channel('public.test-channel.1');
+        return new Channel('public.test-channel');
     }
 
     public function broadcastAs()

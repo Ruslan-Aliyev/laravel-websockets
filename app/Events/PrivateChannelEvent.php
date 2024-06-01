@@ -33,7 +33,7 @@ class PrivateChannelEvent implements ShouldBroadcast
      */
     public function broadcastOn()
     {
-        return new PrivateChannel('private.test-channel.1');
+        return new PrivateChannel('private.test-channel');
     }
 
     public function broadcastAs()

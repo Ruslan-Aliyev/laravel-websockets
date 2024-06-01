@@ -13,15 +13,14 @@ use Illuminate\Support\Facades\Broadcast;
 |
 */
 
-// For public channels
-Broadcast::channel('App.Models.User.{id}', function ($user, $id) {
-    return (int) $user->id === (int) $id;
-});
-
-Broadcast::channel('private.test-channel.{id}', function ($user, $id) {
+Broadcast::channel('public.test-channel', function ($user) {
     return true;
 });
 
-Broadcast::channel('presence.test-channel.{id}', function ($user, $id) {
+Broadcast::channel('private.test-channel', function ($user) {
+    return true;
+});
+
+Broadcast::channel('presence.test-channel', function ($user) {
     return $user;
 });

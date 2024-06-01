@@ -17,7 +17,7 @@
             const list = document.getElementById("updates");
 
             setTimeout(() => {
-                const channel = Echo.channel('public.test-channel.1');
+                const channel = Echo.channel('public.test-channel');
                 
                 channel
                     .subscribed(() => {

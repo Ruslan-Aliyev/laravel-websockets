@@ -17,7 +17,7 @@
             const messages = document.getElementById("messages");
 
             setTimeout(() => {
-                const channel = Echo.private('private.test-channel.1');
+                const channel = Echo.private('private.test-channel');
                 
                 channel
                     .subscribed(() => {
