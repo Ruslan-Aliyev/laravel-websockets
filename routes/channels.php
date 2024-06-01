@@ -21,3 +21,7 @@ Broadcast::channel('App.Models.User.{id}', function ($user, $id) {
 Broadcast::channel('private.test-channel.{id}', function ($user, $id) {
     return true;
 });
+
+Broadcast::channel('presence.test-channel.{id}', function ($user, $id) {
+    return $user;
+});

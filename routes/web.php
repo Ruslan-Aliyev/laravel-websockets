@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PublicChannelController;
 use App\Http\Controllers\PrivateChannelController;
+use App\Http\Controllers\PresenceChannelController;
 
 /*
 |--------------------------------------------------------------------------
@@ -40,4 +41,9 @@ Route::middleware('auth')->group(function () {
     Route::get('/test-private-channel', [PrivateChannelController::class, 'show']);
     Route::post('/test-private-channel', [PrivateChannelController::class, 'test'])->name('test-private-channel');
     Route::get('/check-private-channel', [PrivateChannelController::class, 'check']);
+});
+
+Route::middleware('auth')->group(function () {
+    Route::get('/presence-channel-chat', [PresenceChannelController::class, 'show']);
+    Route::post('/presence-channel-chat', [PresenceChannelController::class, 'send'])->name('presence-channel-chat');
 });

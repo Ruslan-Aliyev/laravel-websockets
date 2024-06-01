@@ -146,6 +146,12 @@ Create the routes, controller, event, channel and blade files for sending and re
 
 Relevant commit: https://github.com/Ruslan-Aliyev/laravel-websockets/commit/b88960cd3ca723d9554f11bbcefb724e6051cde1
 
+## Presence Channels
+
+See the routes, controller, event, channel and blade files for sending and receiving messages on the presence channel
+
+![](/Illustrations/presence_channel_chat.png)
+
 ---
 
 # Tutorials
