@@ -78,6 +78,8 @@ Visit http://localhost:8000/laravel-websockets
 
 If you are really using the Pusher server, the dashboard is here https://dashboard.pusher.com/apps/{app_id}/console
 
+Relevant commit: https://github.com/Ruslan-Aliyev/laravel-websockets/commit/d8871385871382ce4bdb4b79d33595cc50c22096
+
 ## Channel types
 
 - Public: Anyone without signing in can write into.
@@ -93,6 +95,8 @@ Note: in `route.channels.php`'s `Broadcast::channel('App.Models.User.{id}'` must
 Fire the event in an easy way: in `route.web.php`, make a route `Route::get('/test-public-channel', function () { event(new \App\Events\PublicChannelEvent()) ...`, then visit http://localhost:8000/test-public-channel
 
 ![](/Illustrations/public_event_shown_on_dashboard.png)
+
+Relevant commit: https://github.com/Ruslan-Aliyev/laravel-websockets/commit/f1fccc15363e00b92ef7ef166292bda6de4344e3
 
 ## Receiving a public channel event
 
@@ -122,6 +126,14 @@ npm run dev # In another terminal
 
 ![](/Illustrations/public_event_received_on_frontend.png)
 
+Relevant commit: https://github.com/Ruslan-Aliyev/laravel-websockets/commit/0ccfd5fcc32f2a23c8c7df4036de4175c248f6e7
+
+## After some refinements to the public channel
+
+![](/Illustrations/public_channel_refined.png)
+
+Relevant commit: https://github.com/Ruslan-Aliyev/laravel-websockets/commit/b67c44704c782d1342e99708eec4c5146c8072a2
+
 ## Private Channels
 
 Install Laravel Breeze for Auth: https://laravel.com/docs/11.x/starter-kits#laravel-breeze-installation
@@ -130,3 +142,6 @@ Create some users. Easy ways include Tinker or Factory.
 
 Create the routes, controller, event, channel and blade files for sending and receiving messages on the private channel
 
+![](/Illustrations/private_channel_in_action.png)
+
+Relevant commit: https://github.com/Ruslan-Aliyev/laravel-websockets/commit/b88960cd3ca723d9554f11bbcefb724e6051cde1
