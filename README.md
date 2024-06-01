@@ -5,12 +5,12 @@
 WS have 2 patterns: RPC and PubSub.  
 This project will be using the PubSub pattern.  
 
-Pusher and Ably are non-free hosted WS services.  
+[Pusher](https://pusher.com) and [Ably](https://ably.com) are non-free hosted WS services.  
 This project will use the free alternative to Pusher: `beyondcode/laravel-websockets`. It will create a local WS server.   
-Note: `beyondcode/laravel-websockets` made obsolete by Reverb (which is based on ReactPHP).
+Note: [`laravel-websockets`](https://github.com/beyondcode/laravel-websockets) made obsolete by [Reverb](https://reverb.laravel.com) (which is based on [ReactPHP](https://reactphp.org)).
 
-The front-end will use Echo.  
-Note: An alternative for Echo is Soketi.  
+The front-end will use [Echo](https://www.npmjs.com/package/laravel-echo).  
+Note: An alternative for Echo is [Soketi](https://www.npmjs.com/package/@soketi/soketi).  
 
 ## Setup
 
@@ -41,7 +41,7 @@ PUSHER_PORT=6001 # laravel-websocket's local WS server serves on port 6001, as s
 PUSHER_SCHEME=http
 ```
 
-When you are using `beyondcode/laravel-websockets`, the `xxx`s can be anything, because `laravel-websockets` just uses them to identify the app in case there are many apps connected to the same WS server. (See `config/websockets.php`'s `apps` array)
+When you are using `laravel-websockets`, the `xxx`s can be anything, because `laravel-websockets` just uses them to identify the app in case there are many apps connected to the same WS server. (See `config/websockets.php`'s `apps` array)
 
 But if you are really using the Pusher server, then they should be the APP keys and secrets, which is obtained from https://dashboard.pusher.com/apps/{app_id}/keys    
 The host wouldn't be local neither; port should be `443` & scheme should be `https`.   
@@ -102,9 +102,9 @@ Relevant commit: https://github.com/Ruslan-Aliyev/laravel-websockets/commit/f1fc
 
 `npm install laravel-echo pusher-js`
 
-`pusher-js`: Implements the Pusher API
+[`pusher-js`](https://www.npmjs.com/package/pusher-js): Implements the Pusher API
 
-`laravel-echo`: A wrapper around the `pusher-js`, tailored to receive broadcasts from Laravel. It's a single-style wrapper that supports multiple drivers (eg: whether it's `pusher-js` or `socket.io`). The nice thing about using `Echo` is the ability to easily swap drivers, ie: if you start with `Pusher` free, then later decide to use `Reverb` or `Soketi`, you only need to update a bit of config.
+[`laravel-echo`](https://www.npmjs.com/package/laravel-echo): A wrapper around the `pusher-js`, tailored to receive broadcasts from Laravel. It's a single-style wrapper that supports multiple drivers (eg: whether it's `pusher-js` or `socket.io`). The nice thing about using `Echo` is the ability to easily swap drivers, ie: if you start with `Pusher` free, then later decide to use `Reverb` or `Soketi`, you only need to update a bit of config.
 
 Configure `Echo` in `resources/js/bootstrap.js`
 
@@ -145,3 +145,25 @@ Create the routes, controller, event, channel and blade files for sending and re
 ![](/Illustrations/private_channel_in_action.png)
 
 Relevant commit: https://github.com/Ruslan-Aliyev/laravel-websockets/commit/b88960cd3ca723d9554f11bbcefb724e6051cde1
+
+---
+
+# Tutorials
+
+- https://www.youtube.com/watch?v=AUlbN_xsdXg (Very Good)
+- https://www.youtube.com/watch?v=8RL584c7EsI&list=PLWiQT7FWaG1igDILyxwi-h5gFhkXAVeWZ&index=23
+
+## Other Tutorials
+
+- https://beyondco.de/docs/laravel-websockets/getting-started/installation
+- https://github.com/beyondcode/laravel-websockets
+- https://startutorial.com/view/laravel-websockets-tutorial
+- https://www.honeybadger.io/blog/a-guide-to-using-websockets-in-laravel/
+- https://www.youtube.com/playlist?list=PLfdtiltiRHWGoBloQG32kmesr0EUGoYpn
+- https://www.youtube.com/playlist?list=PLwAKR305CRO9rlj-U9oOi4m2sQaWN6XA8
+- https://www.youtube.com/playlist?list=PLQDioScEMUhl_vDV7BcYTUdTU4Jz8g58X
+- https://www.youtube.com/watch?v=pIGy7-7gGXI
+- https://www.youtube.com/watch?v=qdhnC_FUBbs
+- https://www.youtube.com/watch?v=LU3fkcUyCVA
+- https://www.youtube.com/watch?v=YCK8JwDJI5s
+- https://www.youtube.com/watch?v=XgFzHXOk8IQ (long)
