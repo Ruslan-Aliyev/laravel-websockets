@@ -152,6 +152,8 @@ See the routes, controller, event, channel and blade files for sending and recei
 
 ![](/Illustrations/presence_channel_chat.png)
 
+Relevant commit: https://github.com/Ruslan-Aliyev/laravel-websockets/commit/5c04683dce84315b0a5c60d3f6ec5296f173eaeb
+
 ---
 
 # Tutorials
