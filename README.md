@@ -121,3 +121,12 @@ npm run dev # In another terminal
 ```
 
 ![](/Illustrations/public_event_received_on_frontend.png)
+
+## Private Channels
+
+Install Laravel Breeze for Auth: https://laravel.com/docs/11.x/starter-kits#laravel-breeze-installation
+
+Create some users. Easy ways include Tinker or Factory.
+
+Create the routes, controller, event, channel and blade files for sending and receiving messages on the private channel
+
