@@ -176,3 +176,10 @@ Relevant commit: https://github.com/Ruslan-Aliyev/laravel-websockets/commit/5c04
 - https://www.youtube.com/watch?v=LU3fkcUyCVA
 - https://www.youtube.com/watch?v=YCK8JwDJI5s
 - https://www.youtube.com/watch?v=XgFzHXOk8IQ (long)
+- https://laravel.com/docs/11.x/broadcasting
+
+---
+
+# Todo
+
+- Use Redis queue driver instead of `sync`: https://www.cloudways.com/blog/redis-for-queuing-in-laravel
